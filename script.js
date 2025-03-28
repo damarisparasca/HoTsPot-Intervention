@@ -362,19 +362,19 @@
             // FRACTION OF RETENTION BASED ON SOIL, LAND, AND WATER TABLE
             let frRet = 0;
 
-            if (region === "IIssel") {
+            if (region === "ijssel") {
                 frRet = (0.2 + 0.4) / 2;
             }
-            else if (region === "Isselmeer") {
+            else if (region === "isselmeer") {
                 frRet = (0.4 + 0.6) / 2;
             }
-            else if (region === "Maas") {
+            else if (region === "maas") {
                 frRet = (0.2 + 0.4) / 2;
             }
-            else if (region === "Central Netherlands") {
+            else if (region === "central") {
                 frRet = (0.3 + 0.7) / 2;
             }
-            else if (region === "Southern Delta") {
+            else if (region === "south-delta") {
                 frRet = (0.1 + 0.2) / 2;
             }
 
@@ -426,28 +426,28 @@
           const roDitch = frRo * excess
 
           // RUNOFF TO SURFACE WATER 
-          const roSw = (1 - frDeDitches) * roDi
+          const roSw = (1 - frDeDitches) * roDitch
 
           // RETENTION
           const ret = frRet * roSw
 
 	      // RUNOFF TO SEA
           const roSea = (1 - frRet) * roSw
-          
-            // OUTPUT
-            document.getElementById("nitrogen-housing").textContent = `Total nitrogen emission from housing: ${nitrogenHousing.toFixed(2)} kg/year`;
-            document.getElementById("nitrogen-grazing").textContent = `Total nitrogen emission from grazing: ${nitrogenGrazing.toFixed(2)} kg/year`;
-            document.getElementById("ammonia-housing").textContent = `Total ammonia emission from housing: ${ammoniaHousing.toFixed(2)} kg/year`;
-            document.getElementById("ammonia-grazing").textContent = `Total ammonia emission from grazing: ${ammoniaGrazing.toFixed(2)} kg/year`;
-            document.getElementById("nitrification").textContent = `Nitrification: ${nitrification.toFixed(2)} kg/year`;
-            document.getElementById("denitrification").textContent = `Denitrification: ${denitrification.toFixed(2)} kg/year`;
-            document.getElementById("uptake").textContent = `Uptake: ${nitrogenUp.toFixed(2)} kg/year`;
-            document.getElementById("nh4-gw").textContent = `Total NH4 leaching to groundwater: ${nh4Le.toFixed(2)} kg/year`;
-            document.getElementById("no3-gw").textContent = `Total NO3 leaching to groundwater: ${no3Le.toFixed(2)} kg/year`;
-            document.getElementById("ro-ditch").textContent = `Total nitrogen runoff to ditches: ${roDitch.toFixed(2)} kg/year`;
-            document.getElementById("ro-sw").textContent = `Total nitrogen runoff to surface water: ${roSw.toFixed(2)} kg/year`;
-            document.getElementById("retention").textContent = `Retention: ${ret.toFixed(2)} kg/year`;
-            document.getElementById("ro-sea").textContent = `Total nitrogen runoff to sea: ${roSea.toFixed(2)} kg/year`;
+        
+        // OUTPUT
+        document.getElementById("nitrogen-housing").textContent = `Total nitrogen emission from housing: ${nitrogenHousing.toFixed(2)} kg/year`;
+        document.getElementById("nitrogen-grazing").textContent = `Total nitrogen emission from grazing: ${nitrogenGrazing.toFixed(2)} kg/year`;
+        document.getElementById("ammonia-housing").textContent = `Total ammonia emission from housing: ${ammoniaHousing.toFixed(2)} kg/year`;
+        document.getElementById("ammonia-grazing").textContent = `Total ammonia emission from grazing: ${ammoniaGrazing.toFixed(2)} kg/year`;
+        document.getElementById("nitrification").textContent = `Nitrification: ${nitrification.toFixed(2)} kg/year`;
+        document.getElementById("denitrification").textContent = `Denitrification: ${denitrification.toFixed(2)} kg/year`;
+        document.getElementById("uptake").textContent = `Uptake: ${nitrogenUp.toFixed(2)} kg/year`;
+        document.getElementById("nh4-gw").textContent = `Total NH4 leaching to groundwater: ${nh4Le.toFixed(2)} kg/year`;
+        document.getElementById("no3-gw").textContent = `Total NO3 leaching to groundwater: ${no3Le.toFixed(2)} kg/year`;
+        document.getElementById("ro-ditch").textContent = `Total nitrogen runoff to ditches: ${roDitch.toFixed(2)} kg/year`;
+        document.getElementById("ro-sw").textContent = `Total nitrogen runoff to surface water: ${roSw.toFixed(2)} kg/year`;
+        document.getElementById("retention").textContent = `Retention: ${ret.toFixed(2)} kg/year`;
+        document.getElementById("ro-sea").textContent = `Total nitrogen runoff to sea: ${roSea.toFixed(2)} kg/year`;
 
 
         });
