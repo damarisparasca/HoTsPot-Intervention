@@ -10,139 +10,142 @@
   <body>
     <!-- INPUT -->
     <div class="header"><h2>Nitrogen Emission Calculator</h2></div>
-    <div class="band">
-      <h2>Farm Location Information</h2> </div>
-    <div class="interior">
-    <label for="region">Region</label>
-    <select id="region">
-      <option value="">Select</option>
-      <option value="ijssel">IJssel</option>
-      <option value="ijsselmeer">IJsselmeer</option>
-      <option value="maas">Maas</option>
-      <option value="central">Central Netherlands</option>
-      <option value="south-delta">Southern Delta</option>
-    </select>
-    <button class="info-button" onclick="toggleInfo('info-region')">?</button>
-    <div id="info-region" class="info-text hidden">
-      Enter the region of the Netherlands where your farm is located.
-    </div> 
-  
-    <br> <br>
-    <label for="size-ha">Size of farm (in hA):</label>
-    <input type="number" id="size-ha" min="0" placeholder="Type Number">
-    <button class="info-button" onclick="toggleInfo('info-size')">?</button>
-    <div id="info-size" class="info-text hidden">
-      Enter the size of your farm in hectares. 
-    </div> </div>
-    <br>
-    <div class="band">
-      <h2>Animal Information</h2> </div>
+    <div class="container">
+      <div class="calculation-section">
+      <div class="band">
+        <h2>Farm Location Information</h2> </div>
       <div class="interior">
-        <label for="cows">Amount of cows:
-        </label>
-      <input type="number" id="cows" min="0" placeholder="Type Number">
-      <button class="info-button" onclick="toggleInfo('info-cows')">?</button>
-      <div id="info-cows" class="info-text hidden">
-        Enter the number of cows in your farm.
+      <label for="region">Region</label>
+      <select id="region">
+        <option value="">Select</option>
+        <option value="ijssel">IJssel</option>
+        <option value="ijsselmeer">IJsselmeer</option>
+        <option value="maas">Maas</option>
+        <option value="central">Central Netherlands</option>
+        <option value="south-delta">Southern Delta</option>
+      </select>
+      <button class="info-button" onclick="toggleInfo('info-region')">?</button>
+      <div id="info-region" class="info-text hidden">
+        Enter the region of the Netherlands where your farm is located.
+      </div> 
+    
+      <br> <br>
+      <label for="size-ha">Size of farm (in hA):</label>
+      <input type="number" id="size-ha" min="0" placeholder="Type Number">
+      <button class="info-button" onclick="toggleInfo('info-size')">?</button>
+      <div id="info-size" class="info-text hidden">
+        Enter the size of your farm in hectares. 
+      </div> </div>
+     
+      <div class="band">
+        <h2>Animal Information</h2> </div>
+        <div class="interior">
+          <label for="cows">Amount of cows:
+          </label>
+        <input type="number" id="cows" min="0" placeholder="Type Number">
+        <button class="info-button" onclick="toggleInfo('info-cows')">?</button>
+        <div id="info-cows" class="info-text hidden">
+          Enter the number of cows in your farm.
+        </div>
+
+      <br><br>
+      <label for="feed">Feed type:</label>  
+      <select id="feed">
+        <option value="">Select</option>
+        <option value="corn">Corn</option>
+        <option value="grass">Grass</option>
+        <option value="corngrass">Corn + Grass</option>
+      </select>
+      <button class="info-button" onclick="toggleInfo('info-feed')">?</button>
+      <div id="info-feed" class="info-text hidden">
+        Enter the type of feed the cows are consuming.
+      </div></div>
+
+    
+      <div class="band">
+        <h2>Farm Information</h2> 
+      </div> 
+      <div class="interior">
+      <label for="soil">Soil Type:</label>
+      <select id="soil">
+        <option value="">Select</option>
+        <option value="sand">Sand</option>
+        <option value="clay">Clay</option>
+        <option value="loess">Loess</option>
+        <option value="peat">Peat</option>
+      </select>
+      <button class="info-button" onclick="toggleInfo('info-soiltype')">?</button>
+      <div id="info-soiltype" class="info-text hidden">
+        Enter the type of soil your farm has.
       </div>
 
-    <br><br>
+      <br> <br>
 
-    <label for="feed">Feed type:</label>
-    <select id="feed">
-      <option value="">Select</option>
-      <option value="corn">Corn</option>
-      <option value="grass">Grass</option>
-      <option value="corngrass">Corn + Grass</option>
-    </select>
-    <button class="info-button" onclick="toggleInfo('info-feed')">?</button>
-    <div id="info-feed" class="info-text hidden">
-      Enter the type of feed the cows are consuming.
+      <label for="hummidity">Water Table (humidity) :</label>
+      <select id="hummidity">
+        <option value="">Select</option>
+        <option value="dry">Dry</option>
+        <option value="moist">Moist</option>
+        <option value="wet">Wet</option>
+      </select>
+      <button class="info-button" onclick="toggleInfo('info-soilhum')">?</button>
+      <div id="info-soilhum" class="info-text hidden">
+        Enter how humid the soil of your farm is.
+      </div>
+
+      <br> <br>
+
+      <label for="land">Land type:</label>
+      <select id="land">
+        <option value="">Select</option>
+        <option value="grassland">Grassland</option>
+        <option value="maize">Maize</option>
+        <option value="arable">Arable</option>
+      </select>
+      <button class="info-button" onclick="toggleInfo('info-landtype')">?</button>
+      <div id="info-landtype" class="info-text hidden">
+        Enter the type of land of your farm. 
+      </div>
+      <br> <br>
+
+      <label for="housing">Amount of time in housing (%):</label>
+      <input type="number" id="housing" min="0" max="100" placeholder="Type Percentage">
+      <button class="info-button" onclick="toggleInfo('info-housingtime')">?</button>
+      <div id="info-housingtime" class="info-text hidden">
+        Enter the amount of time your cows usually spend in housing.
+      </div>
+
+
+      <br> <br>
+
+      <label for="grazing">Amount of time in grazing (%):</label>
+      <input type="number" id="grazing" min="0" max="100" placeholder="Type Percentage">
+      <button class="info-button" onclick="toggleInfo('info-grazingtime')">?</button>
+      <div id="info-grazingtime" class="info-text hidden">
+        Enter the amount of time your cows usually spend grazing.
+      </div> </div>
+
+      <button id="calculate" class="calculate-button">Calculate</button>
     </div>
 
-    <br> <br>
-    <div class="band">
-      <h2>Farm Information</h2> 
-    </div> <br>
-    <label for="soil">Soil Type:</label>
-    <select id="soil">
-      <option value="">Select</option>
-      <option value="sand">Sand</option>
-      <option value="clay">Clay</option>
-      <option value="loess">Loess</option>
-      <option value="peat">Peat</option>
-    </select>
-    <button class="info-button" onclick="toggleInfo('info-soiltype')">?</button>
-    <div id="info-soiltype" class="info-text hidden">
-      Enter the type of soil your farm has.
+    <div class="result-section">
+      <div class="band"> <h2> Results </h2> </div> 
+      <div class="interior">  
+      <p id="nitrogen-housing">Total nitrogen emission from housing:</p>
+      <p id="nitrogen-grazing">Total nitrogen emission from grazing:</p>
+      <p id="ammonia-housing">Total ammonia emission from housing:</p>
+      <p id="ammonia-grazing">Total ammonia emission from grazing:</p>
+      <p id="nitrification">Nitrification:</p>
+      <p id="denitrification">Denitrification:</p>
+      <p id="uptake">Uptake:</p>    
+      <p id="nh4-gw">Total NH4 leaching to groundwater:</p>
+      <p id="no3-gw">Total NO3 leaching to groundwater:</p>
+      <p id="ro-ditch">Total nitrogen runoff to ditches:</p>
+      <p id="ro-sw">Total nitrogen runoff to surface water:</p>
+      <p id="retention">Retention:</p>
+      <p id="ro-sea">Total nitrogen runoff to sea:</p>
+      </div>
     </div>
-
-    <br> <br>
-
-    <label for="hummidity">Water Table (humidity) :</label>
-    <select id="hummidity">
-      <option value="">Select</option>
-      <option value="dry">Dry</option>
-      <option value="moist">Moist</option>
-      <option value="wet">Wet</option>
-    </select>
-    <button class="info-button" onclick="toggleInfo('info-soilhum')">?</button>
-    <div id="info-soilhum" class="info-text hidden">
-      Enter how humid the soil of your farm is.
-    </div>
-
-    <br> <br>
-
-    <label for="land">Land type:</label>
-    <select id="land">
-      <option value="">Select</option>
-      <option value="grassland">Grassland</option>
-      <option value="maize">Maize</option>
-      <option value="arable">Arable</option>
-    </select>
-    <button class="info-button" onclick="toggleInfo('info-landtype')">?</button>
-    <div id="info-landtype" class="info-text hidden">
-      Enter the type of land of your farm. 
-    </div>
-    <br> <br>
-
-    <label for="housing">Amount of time in housing (%):</label>
-    <input type="number" id="housing" min="0" max="100" placeholder="Type Percentage">
-    <button class="info-button" onclick="toggleInfo('info-housingtime')">?</button>
-    <div id="info-housingtime" class="info-text hidden">
-      Enter the amount of time your cows usually spend in housing.
-    </div>
-
-
-    <br> <br>
-
-    <label for="grazing">Amount of time in grazing (%):</label>
-    <input type="number" id="grazing" min="0" max="100" placeholder="Type Percentage">
-    <button class="info-button" onclick="toggleInfo('info-grazingtime')">?</button>
-    <div id="info-grazingtime" class="info-text hidden">
-      Enter the amount of time your cows usually spend grazing.
-    </div> 
-
-    <br> <br>
-
-    <button id="calculate" class="calculate-button">Calculate</button>
-    <div class="band"> <h2> Results </h2> </div> </div>
-
-    <!-- OUTPUT -->
-    <div class="interior">
-    <p id="nitrogen-housing">Total nitrogen emission from housing:</p>
-    <p id="nitrogen-grazing">Total nitrogen emission from grazing:</p>
-    <p id="ammonia-housing">Total ammonia emission from housing:</p>
-    <p id="ammonia-grazing">Total ammonia emission from grazing:</p>
-    <p id="nitrification">Nitrification:</p>
-    <p id="denitrification">Denitrification:</p>
-    <p id="uptake">Uptake:</p>    
-    <p id="nh4-gw">Total NH4 leaching to groundwater:</p>
-    <p id="no3-gw">Total NO3 leaching to groundwater:</p>
-    <p id="ro-ditch">Total nitrogen runoff to ditches:</p>
-    <p id="ro-sw">Total nitrogen runoff to surface water:</p>
-    <p id="retention">Retention:</p>
-    <p id="ro-sea">Total nitrogen runoff to sea:</p>
-    </div>
+  </div>
   </body>
 </html>

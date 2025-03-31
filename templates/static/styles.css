@@ -1,40 +1,90 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f8f8;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .header {
-    font-family:serif;
-    font-size: 26px;
-    color:#000000;
+    font-size: 24px;
+    color: #333;
     text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    /* border-bottom: 2px solid #acd2ea; */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; 
+  max-width: 90%;
+  margin: auto;
+  gap: 20px;
 }
 
 .interior {
-    font-family:serif;
-    font-size: 16px;
-    color:#000000;
-    text-align: center;
-    padding-top: 20px;
-}
-
-.band {
-    font-family:serif;
     font-size: 16px;
     color:#000000;
     text-align: left;
-    background-color: #acd2ea;
-    height: 40px;
-    line-height: 40px;
-  }
+    padding-top: 20px;
+    /* margin: 10px; */
+}
 
-.calculate-button {
+.calculation-section {
+  flex: 3;
+  background-color: #f9f9f9;
+  /* padding: 10px; */
+  /* border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.result-section {
+  flex: 7;
+  background-color: #f9f9f9;
+  /* border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+}
+
+.band {
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  background-color: #acd2ea;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+  .calculate-button {
     background-color: #93ff7e;
-    border: solid 2px #000000;
-    font-family: serif;
-    color: rgb(0, 0, 0);
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px auto;
     cursor: pointer;
-  }
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.calculate-button:hover {
+    background-color: #388E3C;
+}
 
 .button-wrapper {
     text-align: center;
