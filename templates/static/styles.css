@@ -62,6 +62,10 @@ body {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+
 .arrow1, .arrow2, .arrow3, .arrow4, .arrow5 {
   position: absolute;
   font-size: 60px;
