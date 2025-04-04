@@ -341,7 +341,7 @@ body {
 
 .slider {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1050px;
   height: 600px;
   margin: 10px;
   text-align: start;
@@ -378,9 +378,10 @@ body {
 }
 
 .slide__text {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   font-family: sans-serif;
+  text-align: left;
 }
 
 .slide a {
@@ -403,7 +404,18 @@ a.slide__next,
 }
 
 .slider::before,
-.slider::after,
+.slider::after {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 35px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
+  box-sizing: border-box;
+  pointer-events: none; /* Only pseudo-elements should ignore clicks */
+}
+
 .slide__prev,
 .slide__next {
   position: absolute;
@@ -414,8 +426,9 @@ a.slide__next,
   border-width: 0 4px 4px 0;
   padding: 3px;
   box-sizing: border-box;
+  z-index: 10; /* Bring buttons above everything else */
+  background: transparent;
 }
-
 .slider::before,
 .slider::after {
   content: "";
@@ -443,6 +456,9 @@ a.slide__next,
   margin: 0 10px 0 10px;
 }
 
+.slider__navlink.active {
+  background-color: #be2929;
+}
 
 .read-article{
   position: absolute;

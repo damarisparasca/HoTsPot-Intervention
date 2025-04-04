@@ -489,8 +489,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//function showDiagram() {
-    //let svg = document.getElementById("svgContainer");
-    //svg.style.visibility = "visible";  
-    //svg.style.opacity = "1";  
-//}

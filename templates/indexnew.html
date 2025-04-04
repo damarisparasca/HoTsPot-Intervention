@@ -163,7 +163,7 @@
                       
                 </div>
               </span>
-              <a class="slide__prev" href="#slides__4" title="Next"></a>
+              <a class="slide__prev" href="#slides__3" title="Next"></a>
               <a class="slide__next" href="#slides__2" title="Next"></a>
             </div>
             <div id="slides__2" class="slide">
@@ -305,10 +305,33 @@
               <a class="slide__next" href="#slides__1" title="Next"></a>
             </div>
           </div>
-          <div class="slider__nav">
-            <a class="slider__navlink" href="#slides__1"></a>
-            <a class="slider__navlink" href="#slides__2"></a>
-            <a class="slider__navlink" href="#slides__3"></a>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const slides = document.querySelectorAll(".slide");
+              const navLinks = document.querySelectorAll(".slider__navlink");
+          
+              const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach(link => {
+                      link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+                    });
+                  }
+                });
+              }, {
+                threshold: 0.6 // adjust sensitivity as needed
+              });
+          
+              slides.forEach(slide => observer.observe(slide));
+            });
+          </script>
+                  <div class="slider__nav">
+                    <a class="slider__navlink" href="#slides__1"></a>
+                    <a class="slider__navlink" href="#slides__2"></a>
+                    <a class="slider__navlink" href="#slides__3"></a>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
