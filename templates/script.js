@@ -12,10 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const housingPercentage = parseFloat(document.getElementById("housing").value) || 0;
       const grazingPercentage = parseFloat(document.getElementById("grazing").value) || 0;
 
-      // SHOW ARROWS ANIMATION (runs once, not inside another click event)
-      document.querySelectorAll(".arrow1, .arrow2, .arrow3, .arrow4, .arrow5").forEach(arrow => {
-      arrow.style.display = "block";  
+      // SHOW  ARROWS, LINES, AND CLOUDS ANIMATION
+      document.querySelectorAll(".arrow1, .arrow2, .arrow3, .arrow4, .arrow5, .arrow6, .arrow7, .arrow8, .arrow9, .arrow10, .line1, .line2, .vl, .cloud-n2, .cloud-sf, .cloud-di, .cloud-nh3, .cloud-no3, .cloud-ns, .cloud-total, .cloud-nh4").forEach(element => {
+          element.style.display = "block";
       });
+  
 
       // PERCENTAGES -> DECIMAL
       const housing = housingPercentage / 100;
