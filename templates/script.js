@@ -455,7 +455,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("retention").textContent = `Retention: ${ret.toFixed(2)} kg/year`;
     document.getElementById("ro-sea").textContent = `Total nitrogen runoff to sea: ${roSea.toFixed(2)} kg/year`;
 
-
+    document.querySelector(".cloud-nh3").innerHTML = `NH3: <br> ${ammoniaEm.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-ns").innerHTML = `N2, NO2, N2O: <br> ${denitrification.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-total").innerHTML = `Total N in soil: <br> ${excess.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-nh4").innerHTML = `NH4 leach to ground water: <br> ${nh4Le.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-no3").innerHTML = `NO3 leach to ground water: <br> ${no3Le.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-di").innerHTML = `N runoff to ditches: <br> ${roDitch.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-sf").innerHTML = `N runoff to surface: <br> ${roSw.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-n2").innerHTML = `N2: <br> ${roSea.toFixed(2)} kg/year`;
     });
   });
 

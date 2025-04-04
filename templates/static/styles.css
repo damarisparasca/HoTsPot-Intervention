@@ -150,13 +150,13 @@ body {
 
 .arrow8 {
   bottom: 405px;
-  left: 465px;
+  left: 495px;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .arrow9 {
   bottom: 380px;
-  left: 550px;
+  left: 580px;
   transform: rotate(180deg);
 }
 
@@ -202,7 +202,7 @@ body {
 
 .cloud-ns {
   bottom: 450px; 
-  left: 500px;
+  left: 530px;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
