@@ -341,11 +341,11 @@ body {
 
 .slider {
   width: 100%;
-  max-width: 950px;
-  height: 800px;
-  margin: 20px;
-  text-align: center;
-  border-radius: 20px;
+  max-width: 1000px;
+  height: 600px;
+  margin: 10px;
+  text-align: start;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -368,7 +368,7 @@ body {
   align-items: center;
   flex-shrink: 0;
   width: 100%;
-  height: 1000px;
+  height: 600px;
   scroll-snap-align: center;
   margin-right: 0px;
   box-sizing: border-box;
@@ -378,7 +378,7 @@ body {
 }
 
 .slide__text {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
   font-family: sans-serif;
 }

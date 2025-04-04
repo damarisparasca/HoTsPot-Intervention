@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const housingPercentage = parseFloat(document.getElementById("housing").value) || 0;
       const grazingPercentage = parseFloat(document.getElementById("grazing").value) || 0;
 
+      document.querySelectorAll(".arrow1, .arrow2, .arrow3, .arrow4, .arrow5, .arrow6, .arrow7, .arrow8, .arrow9, .arrow10, .line1, .line2, .vl, .cloud-n2, .cloud-sf, .cloud-di, .cloud-nh3, .cloud-no3, .cloud-ns, .cloud-total, .cloud-nh4").forEach(element => {
+        element.style.display = "block";
+    });
+
       // PERCENTAGES -> DECIMAL
       const housing = housingPercentage / 100;
       const grazing = grazingPercentage / 100;
@@ -460,7 +464,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("retention").textContent = `Retention: ${ret.toFixed(2)} kg/year`;
     document.getElementById("ro-sea").textContent = `Total nitrogen runoff to sea: ${roSea.toFixed(2)} kg/year`;
 
-
+    document.querySelector(".cloud-nh3").innerHTML = `NH3: <br> ${ammoniaEm.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-ns").innerHTML = `N2, NO2, N2O: <br> ${denitrification.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-total").innerHTML = `Total N in soil: <br> ${excess.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-nh4").innerHTML = `NH4 leach to ground water: <br> ${nh4Le.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-no3").innerHTML = `NO3 leach to ground water: <br> ${no3Le.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-di").innerHTML = `N runoff to ditches: <br> ${roDitch.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-sf").innerHTML = `N runoff to surface: <br> ${roSw.toFixed(2)} kg/year`;
+    document.querySelector(".cloud-n2").innerHTML = `N2: <br> ${roSea.toFixed(2)} kg/year`;
 
     });
   });
@@ -470,6 +481,7 @@ document.addEventListener("DOMContentLoaded", function () {
     info.classList.toggle("hidden");
 }
 
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("calculate").addEventListener("click", function() {
         document.querySelectorAll(".label_bg").forEach(el => el.setAttribute("visibility", "visible"));
@@ -477,13 +489,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function showDiagram() {
-    let svg = document.getElementById("svgContainer");
-    svg.style.visibility = "visible";  
-    svg.style.opacity = "1";  
-}
-
- // SHOW ARROWS ANIMATION (runs once, not inside another click event)
- document.querySelectorAll(".arrow1, .arrow2, .arrow3, .arrow4, .arrow5").forEach(arrow => {
-    arrow.style.display = "block";  
-    });
+//function showDiagram() {
+    //let svg = document.getElementById("svgContainer");
+    //svg.style.visibility = "visible";  
+    //svg.style.opacity = "1";  
+//}
