@@ -436,15 +436,30 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // OUTPUT
 
-    document.getElementById("nitrogen-housing").textContent = `${nitrogenHousing.toFixed(2)} kg/year`; 
-    document.getElementById("nitrogen-grazing").textContent = `${nitrogenGrazing.toFixed(2)} kg/year`;
-    document.getElementById("ammonia-housing").textContent = `${ammoniaHousing.toFixed(2)} kg/year`;
-    document.getElementById("ammonia-grazing").textContent = `${ammoniaGrazing.toFixed(2)} kg/year`;
-    document.getElementById("nh4-gw").textContent = `${nh4Le.toFixed(2)} kg/year`;
-    document.getElementById("no3-gw").textContent = `${no3Le.toFixed(2)} kg/year`;
-    document.getElementById("ro-ditch").textContent = `${roDitch.toFixed(2)} kg/year`;
-    document.getElementById("ro-sw").textContent = `${roSw.toFixed(2)} kg/year`;
-    document.getElementById("ro-sea").textContent = `${roSea.toFixed(2)} kg/year`;
+    document.getElementById("nitrogen-house").textContent = `${nitrogenHousing.toFixed(2)} kg/year`; 
+    document.getElementById("nitrogen-graze").textContent = `${nitrogenGrazing.toFixed(2)} kg/year`;
+    document.getElementById("ammonia-house").textContent = `${ammoniaHousing.toFixed(2)} kg/year`;
+    document.getElementById("ammonia-graze").textContent = `${ammoniaGrazing.toFixed(2)} kg/year`;
+    document.getElementById("ammonia-gw").textContent = `${nh4Le.toFixed(2)} kg/year`;
+    document.getElementById("nitrogen-gw").textContent = `${no3Le.toFixed(2)} kg/year`;
+    document.getElementById("runoff-ditch").textContent = `${roDitch.toFixed(2)} kg/year`;
+    document.getElementById("runoff-sw").textContent = `${roSw.toFixed(2)} kg/year`;
+    document.getElementById("runoff-sea").textContent = `${roSea.toFixed(2)} kg/year`;
+
+    document.getElementById("nitrogen-housing").textContent = `Total nitrogen emission from housing: ${nitrogenHousing.toFixed(2)} kg/year`;
+    document.getElementById("nitrogen-grazing").textContent = `Total nitrogen emission from grazing: ${nitrogenGrazing.toFixed(2)} kg/year`;
+    document.getElementById("ammonia-housing").textContent = `Total ammonia emission from housing: ${ammoniaHousing.toFixed(2)} kg/year`;
+    document.getElementById("ammonia-grazing").textContent = `Total ammonia emission from grazing: ${ammoniaGrazing.toFixed(2)} kg/year`;
+    document.getElementById("nitrification").textContent = `Nitrification: ${nitrification.toFixed(2)} kg/year`;
+    document.getElementById("denitrification").textContent = `Denitrification: ${denitrification.toFixed(2)} kg/year`;
+    document.getElementById("uptake").textContent = `Uptake: ${nitrogenUp.toFixed(2)} kg/year`;
+    document.getElementById("nh4-gw").textContent = `Total NH4 leaching to groundwater: ${nh4Le.toFixed(2)} kg/year`;
+    document.getElementById("no3-gw").textContent = `Total NO3 leaching to groundwater: ${no3Le.toFixed(2)} kg/year`;
+    document.getElementById("ro-ditch").textContent = `Total nitrogen runoff to ditches: ${roDitch.toFixed(2)} kg/year`;
+    document.getElementById("ro-sw").textContent = `Total nitrogen runoff to surface water: ${roSw.toFixed(2)} kg/year`;
+    document.getElementById("retention").textContent = `Retention: ${ret.toFixed(2)} kg/year`;
+    document.getElementById("ro-sea").textContent = `Total nitrogen runoff to sea: ${roSea.toFixed(2)} kg/year`;
+
 
 
     });
@@ -461,3 +476,14 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll(".flow_label").forEach(el => el.setAttribute("visibility", "visible"));
     });
 });
+
+function showDiagram() {
+    let svg = document.getElementById("svgContainer");
+    svg.style.visibility = "visible";  
+    svg.style.opacity = "1";  
+}
+
+ // SHOW ARROWS ANIMATION (runs once, not inside another click event)
+ document.querySelectorAll(".arrow1, .arrow2, .arrow3, .arrow4, .arrow5").forEach(arrow => {
+    arrow.style.display = "block";  
+    });
