@@ -20,8 +20,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: stretch; 
-  max-width: 90%;
-  margin: auto;
+  max-width: 100%;
+  margin: 20px;
   gap: 20px;
 }
 
@@ -34,17 +34,17 @@ body {
 }
 
 .calculation-section {
-  flex: 3;
-  background-color: #f9f9f9;
-  /* padding: 10px; */
-  /* border-radius: 8px;
+  flex: 1;
+  min-width: 350px;
+  background-color: #f9f9f9; 
+  /*border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .result-section {
   flex: 7;
   background-color: #f9f9f9;
-  /* border-radius: 8px;
+  /*border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
@@ -341,7 +341,7 @@ body {
 
 .slider {
   width: 100%;
-  max-width: 1050px;
+  max-width: 80%;
   height: 600px;
   margin: 10px;
   text-align: start;
