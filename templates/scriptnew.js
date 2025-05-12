@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const housingPercentage = parseFloat(document.getElementById("housing").value) || 0;
       const grazingPercentage = parseFloat(document.getElementById("grazing").value) || 0;
 
-      document.querySelectorAll(".arrow1, .arrow2, .arrow3, .arrow4, .arrow5, .arrow6, .arrow7, .arrow8, .arrow9, .arrow10, .line1, .line2, .vl, .cloud-n2, .cloud-sf, .cloud-di, .cloud-nh3, .cloud-no3, .cloud-ns, .cloud-total, .cloud-nh4").forEach(element => {
+      document.querySelectorAll(".arrow1, .arrow2, .arrow3, .arrow4, .arrow5, .arrow6, .arrow7, .arrow8, .arrow9, .arrow10, .line1, .line2, .vl, .cloud-n2, .cloud-sf, .cloud-di, .cloud-nh3, .cloud-no3, .cloud-ns, .cloud-total, .cloud-nh4, .cloud-thres").forEach(element => {
         element.style.display = "block";
     });
 
@@ -382,6 +382,36 @@ document.addEventListener("DOMContentLoaded", function () {
             frRet = (0.1 + 0.2) / 2;
         }
 
+        // NITROGEN THRESHOLD
+        let nitrogenThreshold = 0;
+
+        if (landUse === "grassland") {
+            if (soil === "sand") {
+                nitrogenThreshold = 250;
+            } else if (soil === "clay") {
+                nitrogenThreshold = 345;
+            } else if (soil === "peat") {
+                nitrogenThreshold = 265;
+            }
+
+        } else if (landUse === "maize") {
+            if (soil === "sand") {
+                nitrogenThreshold = 140;
+            } else if (soil === "clay") {
+                nitrogenThreshold = 160; //
+            } else if (soil === "peat") {
+                nitrogenThreshold = 150;
+            }
+        } else if (landUse === "arable") {
+            if (soil === "sand") {
+                nitrogenThreshold = 160;
+            } else if (soil === "clay") {
+                nitrogenThreshold = 245;
+            } else if (soil === "peat") {
+                nitrogenThreshold = 160;
+            }
+        }
+
       // FORMULAS
       // NITROGEN UPTAKE MINIMUM
       const nitrogenUpMin = maxUp * fractionMax * hA
@@ -437,6 +467,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // RUNOFF TO SEA
       const roSea = (1 - frRet) * roSw
+
+      // OVER UNDER THRES
+      const over = nitrogenEm - ammoniaEm - nitrogenUp - denitrification;
+      const isOverThreshold = over > nitrogenThreshold;
+
     
     // OUTPUT
 
@@ -472,8 +507,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".cloud-di").innerHTML = `N runoff to ditches: <br> ${roDitch.toFixed(2)} kg/year`;
     document.querySelector(".cloud-sf").innerHTML = `N runoff to surface: <br> ${roSw.toFixed(2)} kg/year`;
     document.querySelector(".cloud-n2").innerHTML = `N2: <br> ${roSea.toFixed(2)} kg/year`;
-
-    });
+    document.querySelector(".cloud-thres").innerHTML = `Threshold: ${nitrogenThreshold} kg/year <br> N ${isOverThreshold ? 'above' : 'below'} threshold`;
+    thresholdCloud.innerHTML = `Threshold: ${nitrogenThreshold} kg/year <br> N ${isOverThreshold ? 'above' : 'below'} threshold`;
+    thresholdCloud.style.backgroundColor = isOverThreshold ? "#f44336" : "#4CAF50";
+});
   });
 
   function toggleInfo(id) {

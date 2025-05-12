@@ -73,7 +73,7 @@ body {
 
 .line1 {
   width: 40%;
-  bottom: 404px;
+  bottom: 70%;
   left: 317px;
   transform: translateX(-50%);
   animation: slideInLeft 0.5s ease-out forwards;
@@ -88,10 +88,10 @@ body {
 }
 
 .vl {
-  bottom: 383px;
-  left: 317px;
+  bottom: 64%;
+  left: 33%;
   width: 5px;
-  height: 30px; 
+  height: 40px; 
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
@@ -102,69 +102,69 @@ body {
 }
 
 .arrow1 {
-  bottom: 210px;
-  left: 180px;
+  bottom: 20%;
+  left: 10%;
   transform: translateX(50px);
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .arrow2 {
-  bottom: 290px; 
-  left: 100px;   
+  bottom: 30%; 
+  left: 10%;   
   transform: translateX(50px);
   animation: slideInUp 0.5s ease-out forwards;
 }
 
 .arrow3 {
-  bottom: 160px; 
-  left: 450px;   
+  bottom: 15%; 
+  left: 50%;   
   transform: translateX(50px);
   animation: slideInDown 0.5s ease-out forwards;
 }
 
 .arrow4 {
-  bottom: 160px; 
-  left: 525px;   
+  bottom: 15%; 
+  left: 50%;   
   transform: translateX(50px);
   animation: slideInDown 0.5s ease-out forwards;
 }
 
 .arrow5 {
-  bottom: 270px;
-  left: 450px;
+  bottom: 30%;
+  left: 50%;
   transform: translateX(50px);
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .arrow6 {
-  bottom: 405px;
-  left: 310px;
+  bottom: 68%;
+  left: 45%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .arrow7 {
-  bottom: 380px;
-  left: 380px;
+  bottom: 65%;
+  left: 75%;
   transform: rotate(180deg);
   animation: slideInLeftRot 0.5s ease-out forwards;
 }
 
 .arrow8 {
-  bottom: 405px;
-  left: 495px;
+  bottom: 68%;
+  left: 65%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .arrow9 {
-  bottom: 380px;
-  left: 580px;
+  bottom: 68%;
+  left: 80%;
   transform: rotate(180deg);
   animation: slideInLeftRot 0.5s ease-out forwards;
 }
 
 .arrow10 {
-  bottom: 325px; 
-  left: 412px;   
+  bottom: 52%; 
+  left: 50%;   
   transform: translateX(50px);
   animation: slideInLeft 0.5s ease-out forwards;
 }
@@ -179,51 +179,64 @@ body {
 }
 
 .cloud-n2 {
-  bottom: 350px; 
-  left: 100px;
+  bottom: 55%; 
+  left: 10%;
   animation: slideInUp 0.5s ease-out forwards;
 }
 
 .cloud-sf {
-  bottom: 210px;
-  left: 20px;
+  bottom: 30%;
+  left: 5%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .cloud-di {
-  bottom: 300px; 
-  left: 250px;
+  bottom: 53%; 
+  left: 38%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .cloud-nh3 {
-  bottom: 450px; 
-  left: 350px;
+  bottom: 80%; 
+  left: 50%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .cloud-ns {
-  bottom: 450px; 
-  left: 530px;
+  bottom: 80%; 
+  left: 65%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
-.cloud-total {
-  bottom: 220px; 
-  left: 450px;
-  animation: slideInDown 0.5s ease-out forwards;
-}
-
 .cloud-nh4 {
-  bottom: 100px; 
-  left: 250px;
+  bottom: 10%; 
+  left: 67%;
   animation: slideInDown 0.5s ease-out forwards;
 }
 
 .cloud-no3 {
-  bottom: 100px; 
-  left: 500px;
+  bottom: 10%; 
+  left: 40%;
   animation: slideInDown 0.5s ease-out forwards;
+}
+
+.cloud-total {
+  bottom: 30%; 
+  left: 58%;
+  animation: slideInDown 0.5s ease-out forwards;
+}
+
+.cloud-thres {
+  background-color: green;
+  position: absolute;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px 10px; 
+  display: none;
+  color: #f8f8f8;
+  bottom: 40%; 
+  left: 65%;
+  animation: slideInDown 5s ease-out forwards;
 }
 
 @keyframes slideInLeft {
