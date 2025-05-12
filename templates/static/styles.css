@@ -72,24 +72,24 @@ body {
 }
 
 .line1 {
+  bottom: 67%;
+  left: 35%;
   width: 40%;
-  bottom: 70%;
-  left: 317px;
   transform: translateX(-50%);
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .line2 {
-  bottom: 370px;
-  left: 317px;
+  bottom: 60%;
+  left: 35%;
   width: 15%;
   transform: translateX(-50%);
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .vl {
-  bottom: 64%;
-  left: 33%;
+  bottom: 62%;
+  left: 35%;
   width: 5px;
   height: 40px; 
   animation: slideInLeft 0.5s ease-out forwards;
@@ -101,70 +101,80 @@ body {
   display: none;
 }
 
+/*ro*/
 .arrow1 {
-  bottom: 20%;
-  left: 10%;
+  bottom: 32%;
+  left: 23%;
   transform: translateX(50px);
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
+/*n2*/
 .arrow2 {
-  bottom: 30%; 
-  left: 10%;   
+  bottom: 44%; 
+  left: 14%;   
   transform: translateX(50px);
   animation: slideInUp 0.5s ease-out forwards;
 }
 
+/*no3*/
 .arrow3 {
-  bottom: 15%; 
-  left: 50%;   
+  bottom: 20%; 
+  left: 57%;   
   transform: translateX(50px);
   animation: slideInDown 0.5s ease-out forwards;
 }
 
+/*nh4*/
 .arrow4 {
-  bottom: 15%; 
-  left: 50%;   
+  bottom: 20%; 
+  left: 70%;   
   transform: translateX(50px);
   animation: slideInDown 0.5s ease-out forwards;
 }
 
+/*nh4*/
 .arrow5 {
-  bottom: 30%;
-  left: 50%;
+  bottom: 43%;
+  left: 56%;
   transform: translateX(50px);
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
+/*nh3*/
 .arrow6 {
-  bottom: 68%;
-  left: 45%;
+  bottom: 66%;
+  left: 34.25%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
+/*nh3 rot*/
 .arrow7 {
-  bottom: 65%;
-  left: 75%;
+  bottom: 63.25%;
+  left: 43%;
   transform: rotate(180deg);
   animation: slideInLeftRot 0.5s ease-out forwards;
 }
 
+/*ns*/
 .arrow8 {
-  bottom: 68%;
-  left: 65%;
+  bottom: 66%;
+  left: 56%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
+/*ns rot*/
 .arrow9 {
-  bottom: 68%;
-  left: 80%;
+  bottom: 63.25%;
+  left: 66%;
   transform: rotate(180deg);
   animation: slideInLeftRot 0.5s ease-out forwards;
 }
 
+/*di down*/
 .arrow10 {
-  bottom: 52%; 
-  left: 50%;   
+  bottom: 53%; 
+  left: 48%;   
   transform: translateX(50px);
   animation: slideInLeft 0.5s ease-out forwards;
 }
@@ -191,20 +201,20 @@ body {
 }
 
 .cloud-di {
-  bottom: 53%; 
+  bottom: 30%; 
   left: 38%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .cloud-nh3 {
-  bottom: 80%; 
-  left: 50%;
+  bottom: 75%; 
+  left: 40%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .cloud-ns {
-  bottom: 80%; 
-  left: 65%;
+  bottom: 75%; 
+  left: 62%;
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
@@ -234,8 +244,8 @@ body {
   padding: 10px 10px; 
   display: none;
   color: #f8f8f8;
-  bottom: 40%; 
-  left: 65%;
+  bottom: 38.75%; 
+  left: 70%;
   animation: slideInDown 5s ease-out forwards;
 }
 
