@@ -237,17 +237,28 @@ body {
 }
 
 .cloud-thres {
-  background-color: green;
   position: absolute;
-  text-align: center;
-  border-radius: 4px;
-  padding: 10px 10px; 
-  display: none;
-  color: #f8f8f8;
-  bottom: 38.75%; 
-  left: 70%;
-  animation: slideInDown 5s ease-out forwards;
+  bottom: 25%;
+  right: 10%;
+  width: 160px; /* Increased width */
+  height: 160px; /* Increased height */
+  background: deepskyblue;
+  border-radius: 100% 5% 100% 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
 }
+
+.cloud-thres-text {
+  color: white;
+  text-align: center;
+  transform: rotate(45deg);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 
 @keyframes slideInLeft {
   from {

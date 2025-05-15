@@ -411,6 +411,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 nitrogenThreshold = 160;
             }
         }
+        
+        nitrogenThreshold = nitrogenThreshold * hA
 
       // FORMULAS
       // NITROGEN UPTAKE MINIMUM
@@ -506,10 +508,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".cloud-no3").innerHTML = `NO3 leach to ground water: <br> ${no3Le.toFixed(2)} kg/year`;
     document.querySelector(".cloud-di").innerHTML = `N runoff to ditches: <br> ${roDitch.toFixed(2)} kg/year`;
     document.querySelector(".cloud-sf").innerHTML = `N runoff to surface: <br> ${roSw.toFixed(2)} kg/year`;
-    document.querySelector(".cloud-n2").innerHTML = `N2: <br> ${roSea.toFixed(2)} kg/year`;
-    document.querySelector(".cloud-thres").innerHTML = `Threshold: ${nitrogenThreshold} kg/year <br> N ${isOverThreshold ? 'above' : 'below'} threshold`;
-    thresholdCloud.innerHTML = `Threshold: ${nitrogenThreshold} kg/year <br> N ${isOverThreshold ? 'above' : 'below'} threshold`;
-    thresholdCloud.style.backgroundColor = isOverThreshold ? "#f44336" : "#4CAF50";
+    document.querySelector(".cloud-n2").innerHTML = `N2: <br> ${roSea.toFixed(2)} kg/year`; 
+    document.querySelector(".cloud-thres-text").innerHTML =
+    `<h3>WaterCredits</h3>
+    <strong>Threshold:</strong> ${nitrogenThreshold} kg/year<br>
+    Emissions <strong>${isOverThreshold ? 'above' : 'below'}</strong><br>
+    ${isOverThreshold
+        ? '<strong>No credits </strong>assigned<br><strong>Purchase </strong>needed'
+        : '<strong>1 credit </strong>assigned<br>Eligible to <strong>sell</strong>'}`;
+
 });
   });
 
