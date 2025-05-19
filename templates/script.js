@@ -470,3 +470,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const info = document.getElementById(id);
     info.classList.toggle("hidden");
 }
+
+app.get('/how-it-works', (req, res) => {
+  res.sendFile(__dirname + '/wscoreinfo.html');
+});
