@@ -472,8 +472,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // OVER UNDER THRES
       const over = nitrogenEm - ammoniaEm - nitrogenUp - denitrification;
-      const isOverThreshold = over > nitrogenThreshold;
+      const difference = nitrogenThreshold - over;
 
+      const isOverThreshold = difference < 0;
+      const creditAmount = Math.abs(difference).toFixed(2);
+
+      let waterCreditInfo = `<h3>Water Credits</h3><strong>Threshold:</strong> ${nitrogenThreshold} kg/year<br>`;
+
+        if (difference === 0) {
+        waterCreditInfo += `No credits assigned or needed.`;
+        } else if (isOverThreshold) {
+        waterCreditInfo += `<strong>Credits needed:</strong> ${creditAmount}`;
+        } else {
+        waterCreditInfo += `<strong>Credits assigned:</strong> ${creditAmount}`;
+        }
     
     // OUTPUT
 
@@ -509,13 +521,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".cloud-di").innerHTML = `N runoff to ditches: <br> ${roDitch.toFixed(2)} kg/year`;
     document.querySelector(".cloud-sf").innerHTML = `N runoff to surface: <br> ${roSw.toFixed(2)} kg/year`;
     document.querySelector(".cloud-n2").innerHTML = `N2: <br> ${roSea.toFixed(2)} kg/year`; 
-    document.querySelector(".cloud-thres-text").innerHTML =
-    `<h3>WaterCredits</h3>
-    <strong>Threshold:</strong> ${nitrogenThreshold} kg/year<br>
-    Emissions <strong>${isOverThreshold ? 'above' : 'below'}</strong><br>
-    ${isOverThreshold
-        ? '<strong>No credits </strong>assigned<br><strong>Purchase </strong>needed'
-        : '<strong>1 credit </strong>assigned<br>Eligible to <strong>sell</strong>'}`;
+    document.querySelector(".cloud-thres-text").innerHTML = waterCreditInfo;
 
 });
   });
