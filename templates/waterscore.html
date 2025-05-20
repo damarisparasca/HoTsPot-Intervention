@@ -377,15 +377,12 @@
       const display = document.getElementById('waterScoreDisplay');
       display.style.display = 'block';
 
-      // Remove previous active highlights
-      document.querySelectorAll('.score-box').forEach(box => box.classList.remove('active'));
 
-      // Highlight current grade
+      document.querySelectorAll('.score-box').forEach(box => box.classList.remove('active'));
       const activeBox = document.getElementById(`score-${grade}`);
       if (activeBox) activeBox.classList.add('active');
     }
 
-    // Attach event listener to the button
       document.getElementById('calculateBtn').addEventListener('click', calculateWaterScore);
      </script>
           
