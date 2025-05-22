@@ -22,9 +22,9 @@
           <label>
             <input type="radio" name="lowproteinfeed" value="no"> No
           </label>
-        <button class="info-button" onclick="toggleInfo('info-region')">?</button>
-        <div id="info-feed" class="info-text hidden">
-          Do you use adjusted feed with low protein content?
+        <button class="info-button" onclick="toggleInfo('info-lowfeed')">?</button>
+        <div id="info-lowfeed" class="info-text hidden">
+          Using low protein feed reduces nitrogen pollution by minimizing the amount of excess nitrogen excreted by animals, which in turn lowers the risk of nitrate leaching and water contamination.
           </div> <br> <br>
           <label for="grindfeed">Do you grind the feed?</label>
           <label>
@@ -33,9 +33,9 @@
           <label>
             <input type="radio" name="grindfeed" value="no"> No
           </label>
-          <button class="info-button" onclick="toggleInfo('info-region')">?</button>
-          <div id="info-feed" class="info-text hidden">
-            Grinding the feed maximizes its efficiency and reduces nitrogen loss.
+          <button class="info-button" onclick="toggleInfo('info-grindfeed')">?</button>
+          <div id="info-grindfeed" class="info-text hidden">
+            Grinding the feed improves digestibility, allowing animals to absorb nutrients more efficiently, which reduces nitrogen waste in manure and lowers the risk of nitrogen pollution.
             </div> <br> <br>
         <label for="additives">Do you use feed additives (such as enzymes, probiotics and organic acids)?
           </label>
@@ -45,8 +45,8 @@
           <label>
             <input type="radio" name="additives" value="no"> No
           </label>
-          <button class="info-button" onclick="toggleInfo('info-region')">?</button>
-          <div id="info-additives" class="info-text hidden">
+          <button class="info-button" onclick="toggleInfo('info-adds')">?</button>
+          <div id="info-adds" class="info-text hidden">
             Using feed additives like enzymes, probiotics, and organic acids improves nutrient absorption in livestock, which reduces nitrogen excretion and lowers nitrogen pollution in manure.
             </div> <br> <br>
 
@@ -100,7 +100,7 @@
                   </label>
                   <button class="info-button" onclick="toggleInfo('info-manadd')">?</button>
                   <div id="info-manadd" class="info-text hidden">
-                    Growth hormone injections increase feed efficiency and animal productivity, which reduces the amount of nitrogen excreted per unit of production. 
+                    Adding manure additives such as digestive enhancers, acidifying agents, or adsorbents helps stabilize nitrogen in manure, reducing ammonia emissions and leaching, and thereby lowering nitrogen pollution.
                     </div> <br> <br>
                     <label for="season">Do you apply manure to a growing crop or just before the establishment of a crop (in spring instead of autumn)?</label>
                     <label>
@@ -111,7 +111,7 @@
                     </label>
                     <button class="info-button" onclick="toggleInfo('info-season')">?</button>
                     <div id="info-season" class="info-text hidden">
-                        Increased milking frequency boosts milk production without a proportional rise in nitrogen excretion, leading to lower nitrogen waste per unit of output. 
+                       Applying manure to a growing crop or just before crop establishment in spring, rather than in autumn, aligns nutrient release with plant uptake, reducing nitrogen losses through leaching and runoff.
                       </div> <br> <br>
                   <label for="excessn">Do you avoid applying excess nitrogen (beyond crop needs)?
                     </label>
@@ -123,8 +123,8 @@
                     </label>
                     <button class="info-button" onclick="toggleInfo('info-excessn')">?</button>
                     <div id="info-excessn" class="info-text hidden">
-                      Using feed additives like enzymes, probiotics, and organic acids improves nutrient absorption in livestock, which reduces nitrogen excretion and lowers nitrogen pollution in manure.
-                      </div> <br> <br>
+                      Avoiding the application of excess nitrogen ensures that crops only receive the amount they can absorb, preventing surplus nitrogen from leaching into groundwater or running off into surface water.
+                    </div> <br> <br>
                       <div class="band">
                         <h2>Grazing</h2> </div>
                       <div class="interior">
@@ -137,7 +137,7 @@
                       </label>
                       <button class="info-button" onclick="toggleInfo('info-grtime')">?</button>
                       <div id="info-grtime" class="info-text hidden">
-                        Growth hormone injections increase feed efficiency and animal productivity, which reduces the amount of nitrogen excreted per unit of production. 
+                        Minimizing grazing time helps reduce soil compaction and nitrogen buildup from concentrated manure deposits, lowering the risk of nitrogen leaching and runoff into nearby water sources.
                         </div> <br> <br>
                         <label for="spread">Do you spread watering and supplemental feeding areas evenly?</label>
                         <label>
@@ -148,7 +148,7 @@
                         </label>
                         <button class="info-button" onclick="toggleInfo('info-spread')">?</button>
                         <div id="info-spread" class="info-text hidden">
-                            Increased milking frequency boosts milk production without a proportional rise in nitrogen excretion, leading to lower nitrogen waste per unit of output. 
+                           Spreading watering and supplemental feeding areas evenly prevents the accumulation of nitrogen-rich waste in specific spots, reducing the risk of localized leaching and runoff.
                           </div> <br> <br>
                       <label for="grseason">Do you avoid grazing in the late autumn or winter?</label>
                         <label>
@@ -159,7 +159,7 @@
                         </label>
                         <button class="info-button" onclick="toggleInfo('info-grseason')">?</button>
                         <div id="info-grseason" class="info-text hidden">
-                          Using feed additives like enzymes, probiotics, and organic acids improves nutrient absorption in livestock, which reduces nitrogen excretion and lowers nitrogen pollution in manure.
+                          Avoiding grazing in late autumn or winter reduces nitrogen pollution because plants absorb less nitrogen, leading to more runoff.
                           </div> <br> <br>
                           <label for="atgrowth">Do you remove the autumn growth through silage harvest?</label>
                           <label>
