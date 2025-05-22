@@ -162,7 +162,13 @@ def main():
             showlegend=True,
             name='Confidence Interval'  # Hidden from legend
         )
-
+        if component == "Nitrate (NO3)":
+            fig.add_hline(
+            y=50,
+            line=dict(color='red', dash='dot'),
+            annotation_text="EU Limit: 50 mg/l NO₃⁻",
+            annotation_position="top right"
+        )
     fig.update_layout(
         legend=dict(
             orientation="h",
