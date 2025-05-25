@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For everyone</title>
+  <title>Prediction</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 <nav>
   <div class="nav-left">Website</div>
   <div class="nav-right">
-    <a href="home.html">Home</a>
+    <a href="home.html" class="active">Home</a>
 
     <div class="dropdown">
-        <a href="everyone.html" class="dropbtn" class="active">For Everyone ▾</button>
+        <a href="everyone.html" class="dropbtn">For Everyone ▾</button>
         <div class="dropdown-content">
             <a href="game.html">The Game</a>
         </div>
@@ -32,7 +32,7 @@
         <a href="policymakers.html" class="dropbtn">For Policy-Makers ▾</button>
         <div class="dropdown-content">
             <a href="prediction.html">Prediction</a>
-            <a href="market.html">Market Price Estimator</a>
+            <a href="market.html" class="active">Market Price Estimator</a>
         </div>
     </div>
 
@@ -41,18 +41,8 @@
 </nav>
 
 <main>
-  <h1>Learn what WaterCredits are</h1>
-  <p>You can learn what WaterCredits are through our farming game.</p>
-
-  <h2>Play here!</h2>
-  <div class="cards-container">
-    <div class="card">
-      <img src="https://via.placeholder.com/300x150.png?text=Image+1" alt="Virtual farm game">
-      <a href="game.html">
-        <button>Virtual farm game</button>
-      </a>
-    </div>
-  </div>
+  <h1>WaterCredits Market Price Estimator</h1>
+  <iframe src="https://valuingblue.streamlit.app/?embed=true"  frameborder="0"></iframe>
 </main>
 
 </body>
