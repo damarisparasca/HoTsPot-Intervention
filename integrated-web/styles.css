@@ -146,7 +146,7 @@ main {
   }
 }
 
-/* Section Layouts */
+/* Home */
 .section {
   display: flex;
   justify-content: space-between;
@@ -171,16 +171,20 @@ main {
 }
 
 .text-content {
-  flex: 0 0 27%;
+  flex: 0 0 40%;
   max-width: 100%;
   text-align: justify;
 }
 
 .image-content {
-  width: 65%;
-  max-width: 100%;
-  height: auto;
+  padding-left: 100px;
+  padding-top: 50px;
 }
+
+.image-content img {
+  border-radius: 5px;
+}
+
 
 @media (max-width: 768px) {
   .flex-container {
@@ -207,3 +211,22 @@ main {
 .wscorebutton:hover {
   background-color: #4d632f;
 }
+
+
+/* Section Layouts */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.image-gallery img {
+  width: 25%;             
+  aspect-ratio: 4 / 3;    
+  object-fit: cover; 
+  border-radius: 5px;
+  display: block;
+}
+
