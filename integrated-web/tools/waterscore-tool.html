@@ -53,17 +53,6 @@
             <div class="band">
                 <h2>Production Efficiency</h2> </div>
               <div class="interior">
-              <label for="injection">Do you use growth hormone injections?</label>
-              <label>
-                <input type="radio" name="injection" value="yes"> Yes
-              </label>
-              <label>
-                <input type="radio" name="injection" value="no"> No
-              </label>
-              <button class="info-button" onclick="toggleInfo('info-injection')">?</button>
-              <div id="info-injection" class="info-text hidden">
-                Growth hormone injections increase feed efficiency and animal productivity, which reduces the amount of nitrogen excreted per unit of production. 
-                </div> <br> <br>
                 <label for="milking">Do you have an increased milking frequency?</label>
                 <label>
                   <input type="radio" name="milking" value="yes"> Yes
@@ -200,7 +189,7 @@
             <button id="calculateBtn" class="calculate-button" onclick="showDiagram()">Calculate Water Score</button>
             <p style="margin-top: 10px;">
             How is the score calculated? 
-            <a href="wscoreinfo.html">Learn more about the Water Score.</a>
+            <a href="/integrated-web/wscoreinfo.html">Learn more about the Water Score.</a>
             </p>
 
             <div id="waterScoreDisplay" style="display:none; margin-top: 20px;">
@@ -377,15 +366,11 @@
       const display = document.getElementById('waterScoreDisplay');
       display.style.display = 'block';
 
-      // Remove previous active highlights
+  
       document.querySelectorAll('.score-box').forEach(box => box.classList.remove('active'));
-
-      // Highlight current grade
       const activeBox = document.getElementById(`score-${grade}`);
       if (activeBox) activeBox.classList.add('active');
     }
-
-    // Attach event listener to the button
       document.getElementById('calculateBtn').addEventListener('click', calculateWaterScore);
      </script>
           
