@@ -277,7 +277,6 @@
       document.getElementById('waterScoreContainer').style.display = 'block';
       document.querySelectorAll('.score-box').forEach(box => box.classList.remove('active'));
 
-      // Highlight current grade
       const activeBox = document.getElementById(`score-${grade}`);
       if (activeBox) activeBox.classList.add('active');
       document.getElementById('calculateBtn').addEventListener('click', calculateWaterScore);
@@ -368,6 +367,12 @@
       if (activeBox) activeBox.classList.add('active');
     }
       document.getElementById('calculateBtn').addEventListener('click', calculateWaterScore);
+
+
+      function toggleInfo(id) {
+        const element = document.getElementById(id);
+        element.classList.toggle('hidden')
+      }
      </script>
           
   </body>
