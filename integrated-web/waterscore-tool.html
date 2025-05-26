@@ -10,7 +10,7 @@
   <body>
     <!-- INPUT -->
     <div class="header"><h2>Water Score Calculator</h2></div>
-    <div class="container">
+    <div class="questions">
         <div class="calculation-section">
         <div class="band">
           <h2>Feed Information</h2> </div>
@@ -22,7 +22,7 @@
           <label>
             <input type="radio" name="lowproteinfeed" value="no"> No
           </label>
-        <button class="info-button" onclick="toggleInfo('info-region')">?</button>
+        <button class="info-button" onclick="toggleInfo('info-feed')">?</button>
         <div id="info-feed" class="info-text hidden">
           Do you use adjusted feed with low protein content?
           </div> <br> <br>
@@ -33,8 +33,8 @@
           <label>
             <input type="radio" name="grindfeed" value="no"> No
           </label>
-          <button class="info-button" onclick="toggleInfo('info-region')">?</button>
-          <div id="info-feed" class="info-text hidden">
+          <button class="info-button" onclick="toggleInfo('info-grindfeed')">?</button>
+          <div id="info-grindfeed" class="info-text hidden">
             Grinding the feed maximizes its efficiency and reduces nitrogen loss.
             </div> <br> <br>
         <label for="additives">Do you use feed additives (such as enzymes, probiotics and organic acids)?
@@ -45,7 +45,7 @@
           <label>
             <input type="radio" name="additives" value="no"> No
           </label>
-          <button class="info-button" onclick="toggleInfo('info-region')">?</button>
+          <button class="info-button" onclick="toggleInfo('info-additives')">?</button>
           <div id="info-additives" class="info-text hidden">
             Using feed additives like enzymes, probiotics, and organic acids improves nutrient absorption in livestock, which reduces nitrogen excretion and lowers nitrogen pollution in manure.
             </div> <br> <br>
