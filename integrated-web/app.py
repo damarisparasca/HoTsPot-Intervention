@@ -13,7 +13,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Set data path
-DATA_FILE_PATH = "data/nivm_dataset.csv"
+DATA_FILE_PATH = "nivm_dataset.csv"
 
 # Clean data 
 def clean_numeric(value):
