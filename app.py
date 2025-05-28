@@ -28,7 +28,7 @@ def clean_numeric(value):
 @st.cache_data
 def load_and_preprocess_data():
     try:
-        df = pd.read_csv("data/nivm_dataset.csv", usecols=lambda col: col not in ['Jaar', 'Watertype', 'Hoofdgrondsoort regio', 'Bedrijfstype', 'Seizoen', 'Aantal bedrijven', 'Eenheid'])
+        df = pd.read_csv("nivm_dataset.csv", usecols=lambda col: col not in ['Jaar', 'Watertype', 'Hoofdgrondsoort regio', 'Bedrijfstype', 'Seizoen', 'Aantal bedrijven', 'Eenheid'])
         na_rows = df[df.isna().any(axis=1)]
         if not na_rows.empty:
             st.warning(f"Found {len(na_rows)} rows with NA values:")
