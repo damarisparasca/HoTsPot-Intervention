@@ -19,21 +19,6 @@ main {
   margin: auto;
 }
 
-button {
-  margin-top: 10px;
-  margin-left: auto;   
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  background-color: #1a608d;
-  text-decoration: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  display: block;         
-}
-
-
 /* Navigation Bar */
 nav {
   background-color: #ffffff;
