@@ -8,12 +8,15 @@ from statsmodels.tsa.arima.model import ARIMA
 from pmdarima import auto_arima
 import matplotlib.pyplot as plt
 import warnings
+import os
+import pandas as pd
 
+base_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(base_dir, "nivm_dataset.csv")
+
+df = pd.read_csv(file_path)
 # Suppress warnings
 warnings.filterwarnings("ignore")
-
-# Set data path
-DATA_FILE_PATH = "nivm_dataset.csv"
 
 # Clean data 
 def clean_numeric(value):
@@ -31,7 +34,7 @@ def clean_numeric(value):
 @st.cache_data
 def load_and_preprocess_data():
     try:
-        df = pd.read_csv(DATA_FILE_PATH)
+        df = pd.read_csv(file_path)
         
         df['Gem'] = df['Gem'].apply(clean_numeric)
         
