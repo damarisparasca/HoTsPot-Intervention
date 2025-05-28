@@ -5,7 +5,7 @@ import numpy as np
 from datetime import datetime
 import re
 #from statsmodels.tsa.arima.model import ARIMA
-from pmdarima import auto_arima
+#from pmdarima import auto_arima
 import matplotlib.pyplot as plt
 import warnings
 
