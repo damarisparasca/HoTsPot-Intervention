@@ -37,6 +37,10 @@ nav {
   color: #004466;
 }
 
+a.nav-left {
+  text-decoration: none;
+}
+
 .nav-right {
   display: flex;
   gap: 2rem;
