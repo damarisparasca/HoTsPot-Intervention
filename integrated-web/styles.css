@@ -241,3 +241,20 @@ img {
   padding-left: 100px;
   padding-top: 50px;
 }
+
+
+.waterinfo button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #1a608d;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.waterinfo button:hover {
+  transform: scale(1.03);
+}
