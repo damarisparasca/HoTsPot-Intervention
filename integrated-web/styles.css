@@ -243,7 +243,7 @@ img {
 }
 
 
-.waterinfo button {
+.waterinfo {
   margin-top: 10px;
   padding: 10px 15px;
   font-size: 16px;
@@ -255,6 +255,6 @@ img {
   cursor: pointer;
 }
 
-.waterinfo button:hover {
+.waterinfo :hover {
   transform: scale(1.03);
 }
