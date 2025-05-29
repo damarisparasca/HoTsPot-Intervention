@@ -4,6 +4,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://*.streamlit.app;">
   <title>Prediction</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -42,7 +43,9 @@
   </nav>
 
 <main>
-  <iframe src="https://hotspot-intervention-wwpysabdsmce8rlswpnkv7.streamlit.app/?embed_options=show_toolbar,light_theme,show_colored_line,show_padding"  frameborder="0"></iframe>
+  <iframe src="https://hotspot-intervention-wwpysabdsmce8rlswpnkv7.streamlit.app/?embed=true"  frameborder="0"
+   title="Hotspot Intervention Streamlit App">
+  </iframe>
 </main>
 
 </body>
